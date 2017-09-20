@@ -1,0 +1,45 @@
+{
+  "name": "graphiy.collection",
+  "version": "0.1.0",
+  "description": "Eventful collection",
+  "main": "src/collection.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Graphiy/collection"
+  },
+  "keywords": [
+    "array data model"
+  ],
+  "author": {
+    "name": "Adrian Dmitra",
+    "email": "adrian@dmitra.com"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "lint": "eslint .",
+    "doc": "jsdoc src -r -d docs",
+    "test": "mocha test --compilers js:babel-core/register"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "dependencies": {
+    "eventemitter3": "^2.0.3"
+  },
+  "peerDependencies": {
+    "lodash": "^4.x.x"
+  },
+  "devDependencies": {
+    "babel-preset-latest": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "jsdoc": "^3.5.3",
+    "mocha": "^3.5.0"
+  }
+}
