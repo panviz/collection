@@ -1,23 +1,25 @@
 {
-  "name": "graphiy.collection",
+  "name": "@graphiy/collection",
   "version": "0.1.0",
   "description": "Eventful collection",
+  "keywords": [
+    "array data model"
+  ],
+  "homepage": "https://github.com/graphiy/collection#readme",
+  "license": "SEE LICENSE IN LICENSE",
+  "author": {
+    "name": "Adrian Dmitra",
+    "email": "adrian@dmitra.com"
+  },
   "main": "src/collection.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Graphiy/collection"
   },
-  "keywords": [
-    "array data model"
-  ],
-  "author": {
-    "name": "Adrian Dmitra",
-    "email": "adrian@dmitra.com"
-  },
-  "license": "SEE LICENSE IN LICENSE",
   "scripts": {
-    "lint": "eslint .",
     "doc": "jsdoc src -r -d docs",
+    "lint": "eslint .",
+    "pretest": "yarn lint",
     "test": "mocha test --compilers js:babel-core/register"
   },
   "babel": {
@@ -25,21 +27,28 @@
       "latest"
     ]
   },
+  "eslintConfig": {
+    "env": {
+      "mocha": true
+    },
+    "extends": "@graphiy/eslint-config",
+    "globals": {
+      "_": true,
+      "$": true
+    }
+  },
   "dependencies": {
     "eventemitter3": "^2.0.3"
   },
-  "peerDependencies": {
-    "lodash": "^4.x.x"
-  },
   "devDependencies": {
+    "@graphiy/eslint-config": "graphiy/eslint-config",
     "babel-preset-latest": "^6.24.1",
     "babel-register": "^6.26.0",
-    "eslint": "^4.3.0",
-    "eslint-config-airbnb": "^15.1.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.1.0",
+    "eslint": "^4.6.0",
     "jsdoc": "^3.5.3",
     "mocha": "^3.5.0"
+  },
+  "peerDependencies": {
+    "lodash": "^4.x.x"
   }
 }

@@ -30,9 +30,9 @@ describe('Collection', () => {
       assert.equal(selection.getCount(), 1)
     })
     it('should not add non string values', () => {
-      selection.add(
-        [0, undefined, null, NaN, Infinity, 1, 3.14, false, function () {}, [], '', 'i1']
-      )
+      selection.add([
+        0, undefined, null, NaN, Infinity, 1, 3.14, false, function () {}, [], '', 'i1',
+      ])
       assert.equal(selection.getCount(), 1)
     })
     it('should remove item', () => {
@@ -53,9 +53,9 @@ describe('Collection', () => {
     })
     it('should not remove anything if no already selected id provided', () => {
       selection.add(['i1', 'i2'])
-      const result = selection.remove(
-        [0, undefined, null, NaN, Infinity, 1, 3.14, false, function () {}, [], '', 'i3']
-      )
+      const result = selection.remove([
+        0, undefined, null, NaN, Infinity, 1, 3.14, false, function () {}, [], '', 'i3',
+      ])
       assert.equal(selection.getCount(), 2)
       assert(!result.length)
     })
@@ -101,9 +101,9 @@ describe('Collection', () => {
       selection.on('remove', resolve)
       selection.on('change', resolve)
       selection.add([0, undefined, null, NaN, Infinity, 1, 3.14, false, function () {}, [], ''])
-      selection.remove(
-        [0, undefined, null, NaN, Infinity, 1, 3.14, false, function () {}, [], '', 'i1']
-      )
+      selection.remove([
+        0, undefined, null, NaN, Infinity, 1, 3.14, false, function () {}, [], '', 'i1',
+      ])
       selection.clear()
       setTimeout(() => { assert.equal(counter, 0); done() })
     })
