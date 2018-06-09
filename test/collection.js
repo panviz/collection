@@ -92,7 +92,7 @@ describe('Collection', () => {
       selection.remove('i1')
       selection.clear()
     })
-    it('should not trigger any events if nothing happend', (done) => {
+    it('should not trigger any events if nothing happened', (done) => {
       let counter = 0
       function resolve () {
         ++counter

@@ -1,0 +1,5 @@
+demo/
+test/
+coverage/
+.travis.yml
+webpack.config.babel.js

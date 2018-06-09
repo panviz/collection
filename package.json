@@ -1,6 +1,6 @@
 {
   "name": "@graphiy/collection",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Eventful collection",
   "keywords": [
     "array data model"
@@ -12,6 +12,7 @@
     "email": "adrian@dmitra.com"
   },
   "main": "src/collection.js",
+  "module": "src/collection.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Graphiy/collection"
@@ -20,11 +21,21 @@
     "doc": "jsdoc src -r -d docs",
     "lint": "eslint .",
     "pretest": "yarn lint",
-    "test": "mocha test --compilers js:babel-core/register"
+    "test": "jest"
   },
   "babel": {
     "presets": [
-      "latest"
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 versions"
+            ],
+            "node": "current"
+          }
+        }
+      ]
     ]
   },
   "eslintConfig": {
@@ -38,15 +49,20 @@
     }
   },
   "dependencies": {
-    "eventemitter3": "^2.0.3"
+    "eventemitter3": "^3.0.3"
   },
   "devDependencies": {
-    "@graphiy/eslint-config": "graphiy/eslint-config",
-    "babel-preset-latest": "^6.24.1",
-    "babel-register": "^6.26.0",
-    "eslint": "^4.6.0",
+    "@graphiy/eslint-config": "^0.1.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
+    "jest": "^23.1.0",
     "jsdoc": "^3.5.3",
-    "mocha": "^3.5.0"
+    "mocha": "^5.2.0"
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/**/*.js"
+    ]
   },
   "peerDependencies": {
     "lodash": "^4.x.x"
