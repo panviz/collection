@@ -1,12 +1,12 @@
 {
-  "name": "@graphiy/collection",
-  "version": "0.1.1",
+  "name": "@panviz/collection",
+  "version": "0.0.1",
   "description": "Eventful collection",
   "keywords": [
     "array data model"
   ],
-  "homepage": "https://github.com/graphiy/collection#readme",
-  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://github.com/panviz/collection#readme",
+  "license": "MIT",
   "author": {
     "name": "Adrian Dmitra",
     "email": "adrian@dmitra.com"
@@ -15,7 +15,7 @@
   "module": "src/collection.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Graphiy/collection"
+    "url": "https://github.com/panviz/collection"
   },
   "scripts": {
     "doc": "jsdoc src -r -d docs",
@@ -23,26 +23,11 @@
     "pretest": "yarn lint",
     "test": "jest"
   },
-  "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "browsers": [
-              "last 2 versions"
-            ],
-            "node": "current"
-          }
-        }
-      ]
-    ]
-  },
   "eslintConfig": {
     "env": {
       "mocha": true
     },
-    "extends": "@graphiy/eslint-config",
+    "extends": "@panviz/eslint-config",
     "globals": {
       "_": true,
       "$": true
@@ -52,8 +37,7 @@
     "eventemitter3": "^3.0.3"
   },
   "devDependencies": {
-    "@graphiy/eslint-config": "^0.1.0",
-    "babel-preset-env": "^1.7.0",
+    "@panviz/eslint-config": "^0.0.1",
     "eslint": "^4.19.1",
     "jest": "^23.1.0",
     "jsdoc": "^3.5.3",
